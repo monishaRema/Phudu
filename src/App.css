@@ -8,6 +8,12 @@ body{
     color: #0f0f0f9a
 }
 
+.my-container{
+    max-width: 1320px;
+    margin-inline: auto;
+    padding-inline: 20px;
+}
+
 .text-green{
     color: #09982F;
 }
@@ -25,4 +31,20 @@ body{
 }
 .bg-blue{
   background-color: #176AE5;
+}
+.navbtn{
+  border-bottom: 3px solid transparent;
+}
+
+.navbtn.active, .navbtn:active{
+  color: #176AE5;
+  border:0;
+  border-radius: 0;
+  border-bottom: 3px solid #176AE5;
+  background-color: transparent;
+}
+.flex-center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
