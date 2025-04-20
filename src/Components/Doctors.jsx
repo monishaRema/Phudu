@@ -18,7 +18,6 @@ const Doctors = ({doctors}) => {
                     {
                         doctors.map(doctor => <Doctor key={doctor.id} doctor={doctor}></Doctor>)
                     }
-
                 </div>
                 <div className="text-center mt-12">
                 <Link className=' inline-block py-3 px-8 text-xl font-bold text-center  border  text-white bg-blue-500 rounded-full transition ease-in-out duration-300 hover:bg-transparent hover:text-blue-500'>View All Doctors</Link>
