@@ -6,19 +6,16 @@ import Blog from "../Pages/Blog";
 import Contact from "../Pages/Contact";
 import Error from "../Pages/Error";
 
-
 export const Routes = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     errorElement: <Error />,
     children: [
-      { path: "/",
-        loader: () => fetch("doctors.json"),
-        Component: Home },
+      { path: "/", loader: () => fetch("doctors.json"), Component: Home },
       { path: "/my-bookings", Component: MyBookings },
       { path: "/blogs", Component: Blog },
-      {path: "/contact", Component: Contact},
+      { path: "/contact", Component: Contact },
     ],
   },
 ]);
