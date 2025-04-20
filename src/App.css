@@ -1,0 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+@import "tailwindcss";
+@plugin "daisyui";
+
+body{
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #EFEFEF;
+    color: #0f0f0f9a
+}
+
+.text-green{
+    color: #09982F;
+}
+.text-blue{
+  color: #176AE5;
+}
+.text-dark{
+  color: #0F0F0F;
+}
+.text-warning{
+  color: #FFA000;
+}
+.text-danger{
+  color: #FF0000;
+}
+.bg-blue{
+  background-color: #176AE5;
+}

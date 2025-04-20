@@ -1,0 +1,171 @@
+[
+    {
+      "image": "https://img.freepik.com/free-photo/professional-medic-woman-with-tablet_23-2147648682.jpg?t=st=1745174162~exp=1745177762~hmac=5de64391f273079c4a954f50b2a728cc322ba4bed48f9730f95142ad6eebf880&w=740",
+      "name": "Dr. Sarah Mitchell",
+      "education": {
+        "field": "MBBS, MD",
+        "institution": "General Medicine, DNB"
+      },
+      "speciality": "Cardiologist",
+      "experience": "15+",
+      "registration": "Reg No: BD 124512540",
+      "availability": ["Monday", "Tuesday", "Thursday", "Friday"],
+      "works": "Boston General Hospital",
+      "fee": "Taka : 1100"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/portrait-confident-male-doctor_329181-12199.jpg?t=st=1745174199~exp=1745177799~hmac=0a9a18d7ca3223381c3b2f8c9f4d8448315f34fc10f07373312ddd099ee1c5e7&w=740",
+      "name": "Dr. James Carter",
+      "education": {
+        "field": "MBBS, MS",
+        "institution": "Orthopedic Surgery, AIIMS"
+      },
+      "speciality": "Orthopedic Surgeon",
+      "experience": "12+",
+      "registration": "Reg No: IN 456789210",
+      "availability": ["Tuesday", "Wednesday", "Saturday"],
+      "works": "Apollo Hospital Delhi",
+      "fee": "Taka : 1300"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/young-female-doctor-white-medical-suit-with-stethoscope-white-protective-mask-writing-down-notes-white_140725-16508.jpg?t=st=1745174119~exp=1745177719~hmac=fb2f02c48570370874d7d4e3adcc77fb32b3d62759d9bb251162a52fb23c02b3&w=996",
+      "name": "Dr. Anjali Deshmukh",
+      "education": {
+        "field": "MBBS, MD",
+        "institution": "Pediatrics, CMC Vellore"
+      },
+      "speciality": "Pediatrician",
+      "experience": "10+",
+      "registration": "Reg No: IN 558899440",
+      "availability": ["Monday", "Wednesday", "Friday"],
+      "works": "Narayana Health, Bangalore",
+      "fee": "Taka : 900"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/portrait-smiling-handsome-male-doctor-man_171337-5055.jpg?t=st=1745174096~exp=1745177696~hmac=252f79e61fb6cfff63800f40d3ef429fb9d9c8d50c0400e57a2ff3872fb0761e&w=996",
+      "name": "Dr. Mahmudul Hassan",
+      "education": {
+        "field": "MBBS, FCPS",
+        "institution": "Dermatology, BSMMU"
+      },
+      "speciality": "Dermatologist",
+      "experience": "8+",
+      "registration": "Reg No: BD 789654321",
+      "availability": ["Sunday", "Tuesday", "Thursday"],
+      "works": "Square Hospital, Dhaka",
+      "fee": "Taka : 1000"
+    },
+    {
+      "image": "https://img.freepik.com/free-psd/doctor-preparing-routine-medical-check_23-2150493256.jpg?t=st=1745173984~exp=1745177584~hmac=ace902020647be421d5844ee2dfbd5af020b6ac2613c2660aea21b0cf17d1715&w=996",
+      "name": "Dr. Mario Gonzalez",
+      "education": {
+        "field": "MBBS, DGO",
+        "institution": "Obstetrics & Gynecology, R.G. Kar Medical College"
+      },
+      "speciality": "Gynecologist",
+      "experience": "11+",
+      "registration": "Reg No: IN 336541290",
+      "availability": ["Monday", "Thursday", "Saturday"],
+      "works": "Fortis Hospital, Kolkata",
+      "fee": "Taka : 1050"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/front-view-young-female-doctor-white-medical-suit-with-stethoscope-smiling-white_140725-16521.jpg?t=st=1745174063~exp=1745177663~hmac=435ca91194fdd36cdf8005e676fd3f96651ee3302d6c0fb82e7c69e5a2fcd791&w=996",
+      "name": "Dr. Sabrina Islam",
+      "education": {
+        "field": "MBBS, MD",
+        "institution": "Neurology, Dhaka Medical College"
+      },
+      "speciality": "Neurologist",
+      "experience": "9+",
+      "registration": "Reg No: BD 567123876",
+      "availability": ["Sunday", "Tuesday", "Friday"],
+      "works": "United Hospital, Dhaka",
+      "fee": "Taka : 1200"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/doctor-smiling-offering-hand_23-2148075683.jpg?t=st=1745174326~exp=1745177926~hmac=99bb62000955fd11ff341a237eb6ca1824ee13fdbe125a650ec94ca319be5604&w=740",
+      "name": "Dr. Tanvir Ahmed",
+      "education": {
+        "field": "MBBS, FCPS",
+        "institution": "ENT, Sir Salimullah Medical College"
+      },
+      "speciality": "ENT Specialist",
+      "experience": "7+",
+      "registration": "Reg No: BD 998812345",
+      "availability": ["Monday", "Wednesday", "Saturday"],
+      "works": "Popular Diagnostic Centre",
+      "fee": "Taka : 950"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/front-view-young-female-doctor-white-medical-suit-with-blue-stethoscope-smiling_140725-17948.jpg?t=st=1745174248~exp=1745177848~hmac=3f0ccc4803dfc91321077baa9b937a402ba5fb7d116cebc05b7465821c247cae&w=996",
+      "name": "Dr. Julia Fernandez",
+      "education": {
+        "field": "MBBS, MD",
+        "institution": "Psychiatry, Yale University"
+      },
+      "speciality": "Psychiatrist",
+      "experience": "13+",
+      "registration": "Reg No: US 456780001",
+      "availability": ["Tuesday", "Thursday", "Friday"],
+      "works": "Mount Sinai Hospital, NY",
+      "fee": "Taka : 1400"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/young-female-doctor-white-medical-suit-with-stethoscope-white_140725-16514.jpg?t=st=1745174481~exp=1745178081~hmac=55393711d019809fd31350fb3b625f8fc56afc2c5362ddd120485fb232a9c80f&w=996",
+      "name": "Dr. Nabila Yasmin",
+      "education": {
+        "field": "MBBS, FCPS",
+        "institution": "Ophthalmology, National Eye Institute"
+      },
+      "speciality": "Ophthalmologist",
+      "experience": "10+",
+      "registration": "Reg No: BD 445667890",
+      "availability": ["Monday", "Wednesday", "Friday"],
+      "works": "Ispahani Eye Institute",
+      "fee": "Taka : 1000"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/doctor-with-his-arms-crossed-white-background_1368-5790.jpg?t=st=1745173732~exp=1745177332~hmac=c6d39e7482b59241316f11fe59ffd7bbe7d548f0c23f338c9ef30f90e5581a80&w=740",
+      "name": "Dr. Adnan Rahman",
+      "education": {
+        "field": "MBBS, MD",
+        "institution": "Gastroenterology, PG Hospital"
+      },
+      "speciality": "Gastroenterologist",
+      "experience": "8+",
+      "registration": "Reg No: BD 334455667",
+      "availability": ["Sunday", "Tuesday", "Thursday"],
+      "works": "Labaid Specialized Hospital",
+      "fee": "Taka : 1100"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/front-view-male-doctor-medical-suit-wearing-mask-against-covid-splash-white-wall-virus-covid-illness-disease-pandemic_140725-67261.jpg?t=st=1745174355~exp=1745177955~hmac=6801e2a478edee4ea34015030cd48e4e373618406298fa8d2975f4710636822e&w=996",
+      "name": "Dr. Mehnaz Rahimi",
+      "education": {
+        "field": "MBBS, MD",
+        "institution": "Endocrinology, BSMMU"
+      },
+      "speciality": "Endocrinologist",
+      "experience": "9+",
+      "registration": "Reg No: BD 554433221",
+      "availability": ["Monday", "Wednesday", "Friday"],
+      "works": "Ibn Sina Hospital",
+      "fee": "Taka : 1050"
+    },
+    {
+      "image": "https://img.freepik.com/free-photo/front-view-doctor-with-stethoscope-smiling_23-2148728418.jpg?t=st=1745174419~exp=1745178019~hmac=3b0f7b2c1d8cb9cc3cadefee21f8a581c42d15c8210d9e8c3f94d4b309c55d12&w=826",
+      "name": "Dr. Farhana Alam",
+      "education": {
+        "field": "MBBS, FCPS",
+        "institution": "Nephrology, Chittagong Medical College"
+      },
+      "speciality": "Nephrologist",
+      "experience": "6+",
+      "registration": "Reg No: BD 667788990",
+      "availability": ["Tuesday", "Thursday", "Saturday"],
+      "works": "Chattogram Maa-O-Shishu Hospital",
+      "fee": "Taka : 950"
+    }
+  ]
+  
