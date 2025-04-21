@@ -9,9 +9,9 @@ const Banner = ({handleSeachBtn}) => {
   
 
   return (
-    <section className="banner">
+    <section className="banner py-5">
       <div className="my-container ">
-        <div className="bg-gray-150 max-w-[1180px] mx-auto px-25 py-10 rounded-3xl border border-gray-50">
+        <div className="bg-linear-to-t from-[#ffffff] to-[#ffffff05]   px-25 py-10 rounded-3xl border-3 border-white">
         <h1 className="text-dark font-black text-5xl text-center mt-10 max-w-[920px] mx-auto">
           Dependable Care, Backed by Trusted Professionals.
         </h1>
@@ -26,16 +26,16 @@ const Banner = ({handleSeachBtn}) => {
             <input
             value={searchText}
             onChange={(e)=>setSearchText(e.target.value)}
-              className="w-full px-5 py-3 bg-gray-100 rounded-full border border-gray-300 outline-0 text-black"
+              className="w-9/12 px-8 py-3 bg-gray-100 rounded-full border border-gray-300 outline-0 text-black"
               type="text"
               id="search"
               placeholder="Search"
             />
             <button
               type="submit"
-              className="px-5 py-2 bg-gray-700 text-white rounded border-0 outline-0"
+              className=" w-3/12 px-8 py-3 font-bold text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
             >
-              Search
+              Search Now
             </button>
           </form>
         </div>

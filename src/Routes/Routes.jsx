@@ -3,8 +3,9 @@ import RootLayout from "../RootLayout/RootLayout";
 import Home from "../Pages/Home";
 import MyBookings from "../Pages/MyBookings";
 import Blog from "../Pages/Blog";
-import Contact from "../Pages/Contact";
 import Error from "../Pages/Error";
+import Doctor from "../Components/Doctor";
+import DocotorCard from "../Components/DocotorCard";
 
 export const Routes = createBrowserRouter([
   {
@@ -19,7 +20,11 @@ export const Routes = createBrowserRouter([
          Component: Home },
       { path: "/my-bookings", Component: MyBookings },
       { path: "/blogs", Component: Blog },
-      { path: "/contact", Component: Contact },
+      {
+        path: "doctor/:id",
+        loader: () => fetch("doctors.json"),
+        Component: DocotorCard
+      }
     ],
   },
 ]);

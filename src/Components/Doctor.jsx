@@ -21,7 +21,7 @@ const Doctor = ({doctor}) => {
             {registration} </p>
             
         </div>
-        <Link className='mt-5 block p-3 text-xl font-bold text-center transition ease-in-out duration-300 border bg-transparent text-blue-500 hover:text-white hover:bg-blue-500 w-full rounded-full'>View Details</Link>
+        <Link to={`doctor/${id}`} className='mt-5 block p-3 text-xl font-bold text-center transition ease-in-out duration-300 border bg-transparent text-blue-500 hover:text-white hover:bg-blue-500 w-full rounded-full'>View Details</Link>
 
        </div>
     );

@@ -6,7 +6,7 @@ const Navbar = () => {
     return (
         <header className="header">
             <div className="my-container">
-                <div className="flex justify-between items-center py-4">
+                <div className="flex justify-between items-center py-5">
                     <Link to="/" className='flex items-center gap-2' >
                         <img className='size-12' src={Logo} alt="Logo" />
                         <h3  className="text-3xl font-black text-dark" >Phudu</h3>
