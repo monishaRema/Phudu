@@ -1,8 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import bannerImg1 from "../assets/labor-union-members-working-together.jpg";
 import bannerImg2 from "../assets/team-young-specialist-doctors-standing-corridor-hospital.jpg";
 
-const Banner = () => {
+const Banner = ({handleSeachBtn}) => {
+
+  const[searchText, setSearchText] = useState('');
+
+  
+
   return (
     <section className="banner">
       <div className="my-container ">
@@ -17,8 +22,10 @@ const Banner = () => {
           receive quality care you can trust.
         </p>
         <div className="max-w-[920px] mx-auto my-6">
-          <form className="flex items-center gap-2 ">
+          <form onSubmit={e=>handleSeachBtn(e,searchText)} className="flex items-center gap-2 ">
             <input
+            value={searchText}
+            onChange={(e)=>setSearchText(e.target.value)}
               className="w-full px-5 py-3 bg-gray-100 rounded-full border border-gray-300 outline-0 text-black"
               type="text"
               id="search"
