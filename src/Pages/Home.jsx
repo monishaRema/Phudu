@@ -5,6 +5,7 @@ import Doctors from '../Components/Doctors';
 import Services from '../Components/Services';
 
 const Home = () => {
+   
     const doctors = useLoaderData();
     return (
         <>

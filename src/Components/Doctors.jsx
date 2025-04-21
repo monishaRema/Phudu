@@ -7,6 +7,7 @@ const Doctors = ({doctors}) => {
 
 
 
+
     return (
         <section className="doctors py-20">
             <div className="my-container">

@@ -12,7 +12,11 @@ export const Routes = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <Error />,
     children: [
-      { path: "/", loader: () => fetch("doctors.json"), Component: Home },
+      { path: "/", 
+        index: true,
+        hydrateFallbackElement:<p>Loading, Please wait..</p>,
+        loader: () => fetch("doctors.json"),
+         Component: Home },
       { path: "/my-bookings", Component: MyBookings },
       { path: "/blogs", Component: Blog },
       { path: "/contact", Component: Contact },
