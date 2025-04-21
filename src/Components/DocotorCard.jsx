@@ -10,14 +10,14 @@ const DocotorCard = () => {
   const {
     name,
     education,
-    speciality,
-    experience,
     registration,
     availability,
     works,
     fee,
     image,
   } = doctorDetails;
+
+
 
   return (
     <section className="doctor-details py-20">

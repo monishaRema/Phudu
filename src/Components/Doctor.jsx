@@ -3,7 +3,7 @@ import { RiRegisteredLine } from 'react-icons/ri';
 import { Link } from 'react-router';
 
 const Doctor = ({doctor}) => {
-    const {id, name, education, speciality, experience, registration, availability, works, fee, image} = doctor;
+    const {id, name, education, experience, registration, image} = doctor;
     return (
        <div className="doctor-card p-8 rounded-2xl bg-white flex flex-col justify-between">
         <div className="img-box rounded-xl overflow-hidden h-[250px]">
