@@ -16,6 +16,14 @@ const DoctorCard = () => {
   const { name, education, registration, availability, works, fee, image } =
     doctorDetails;
 
+  const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const date = new Date()
+  const TodayName = dayName[date.getDay()]
+
+  const available = availability.includes(TodayName) ? true : false
+
+  const btnDisabled = available ? '' : 'opacity-50 cursor-not-allowed bg-gray-400 hover:bg-gray-400'
+
   return (
     <section className="doctor-details py-20">
       <div className="my-container">
@@ -88,9 +96,9 @@ const DoctorCard = () => {
           </h2>
           <div className="text-center mt-6 border-t border-dashed pt-4 border-gray-300 flex gap-8 items-center justify-between">
             <span className="text-lg font-bold">Availability</span>
-            <span className="px-4 py-2 rounded-full bg-[#09982F10] border border-[#09982F20] text-green">
-              Available Today
-            </span>
+            {
+                available ? <span className='px-4 py-2 rounded-full bg-[#09982F10] border border-[#09982F20] text-green'>Available</span> : <span className='px-4 py-2 rounded-full bg-[#FF000010] border border-[#FF000020] text-[#ff000075]'>Not Available</span>
+              }
           </div>
           <div className="text-center mt-6 border-t pt-4 border-gray-200">
           
@@ -109,7 +117,8 @@ const DoctorCard = () => {
             
             <button
               onClick={() => setDataToDB(newId, name, navigate)}
-              className="block py-4 px-8 w-full font-bold text-lg md:text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
+              className={`block py-4 px-8 w-full font-bold text-lg md:text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300 ${btnDisabled}`}
+              disabled={!available}
             >
               Book Appointment Now
             </button>
