@@ -7,6 +7,7 @@ import {
   Tooltip,
   ResponsiveContainer,
   Cell,
+  CartesianGrid,
 } from "recharts";
 
 const MyBarChart = ({ doctors }) => {
@@ -32,6 +33,21 @@ const MyBarChart = ({ doctors }) => {
     return <path d={getPath(x, y, width, height)} stroke="none" fill={fill} />;
   };
 
+  const renderCustomLabel = ({ x, y, value, width }) => {
+    return (
+      <text
+        x={x + width / 2} 
+        y={y + 10} 
+        fill="#a708fc"
+        textAnchor="middle"
+        fontSize={14}
+        fontWeight="bold"
+      >
+        {value}
+      </text>
+    );
+  };
+
   const color = [
     "#0088FE",
     "#00C49F",
@@ -48,12 +64,13 @@ const MyBarChart = ({ doctors }) => {
   ];
 
   const renderBarChart = (data) => (
-    <ResponsiveContainer width="100%" height={300}>
+    <ResponsiveContainer width="100%" height={450}>
       <BarChart data={data}>
         <XAxis dataKey="name" />
         <YAxis />
         <Tooltip />
-        <Bar dataKey="fee" shape={<TriangleBar />} label>
+        <CartesianGrid stroke="#c9ced6" strokeDasharray="5 5"/>
+        <Bar dataKey="fee" shape={<TriangleBar />} label={renderCustomLabel}>
           {data.map((value, index) => (
             <Cell key={`cell-${index}`} fill={color[index]} />
           ))}
