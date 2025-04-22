@@ -4,8 +4,9 @@ import Home from "../Pages/Home";
 import MyBookings from "../Pages/MyBookings";
 import Blog from "../Pages/Blog";
 import Error from "../Pages/Error";
-import Doctor from "../Components/Doctor";
-import DocotorCard from "../Components/DocotorCard";
+
+import DoctorCard from "../Components/DoctorCard";
+import Spinner from "../Components/Spinner";
 
 export const Routes = createBrowserRouter([
   {
@@ -13,20 +14,33 @@ export const Routes = createBrowserRouter([
     element: <RootLayout />,
     errorElement: <Error />,
     children: [
-      { path: "/", 
+      {
+        path: "/",
         index: true,
-        hydrateFallbackElement:<p>Loading, Please wait.. </p>,
-        loader: () => fetch("./doctors.json"),
-         Component: Home },
-      { path: "/my-bookings",
-        loader: () => fetch("./doctors.json"),
-         Component: MyBookings },
+        hydrateFallbackElement: <Spinner></Spinner>,
+        loader: async () => {
+          const res = await fetch("/doctors.json");
+          return res.json();
+        },
+        Component: Home,
+      },
+      {
+        path: "/my-bookings",
+        loader: async () => {
+          const res = await fetch("/doctors.json");
+          return res.json();
+        },
+        Component: MyBookings,
+      },
       { path: "/blogs", Component: Blog },
       {
         path: "/doctor/:id",
-        loader: () => fetch("./doctors.json"),
-        Component: DocotorCard
-      }
+        loader: async () => {
+          const res = await fetch("/doctors.json");
+          return res.json();
+        },
+        Component: DoctorCard,
+      },
     ],
   },
 ]);

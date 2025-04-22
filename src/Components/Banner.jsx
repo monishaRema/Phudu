@@ -22,26 +22,30 @@ const Banner = ({handleSeachBtn}) => {
           receive quality care you can trust.
         </p>
         <div className="max-w-[920px] mx-auto my-6">
-          <form onSubmit={e=>handleSeachBtn(e,searchText)} className="flex items-center gap-2 ">
+          <form onSubmit={e=>handleSeachBtn(e,searchText)} className="flex items-center gap-2 flex-col lg:flex-row justify-center">
             <input
             value={searchText}
             onChange={(e)=>setSearchText(e.target.value)}
-              className="w-9/12 px-8 py-3 bg-gray-100 rounded-full border border-gray-300 outline-0 text-black"
+              className="w-full lg:w-9/12 px-8 py-3 bg-gray-100 rounded-full border border-gray-300 outline-0 text-black"
               type="text"
               id="search"
               placeholder="Search"
             />
             <button
               type="submit"
-              className=" w-3/12 px-8 py-3 font-bold text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
+              className=" w-full lg:w-3/12 px-8 py-3 font-bold text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
             >
               Search Now
             </button>
           </form>
         </div>
-        <div className="flex gap-4 justify-center items-center my-5 ">
-            <img className="max-w-[530px] object-contain rounded-3xl " src={bannerImg1} alt="" />
-            <img className="max-w-[530px] object-contain rounded-3xl " src={bannerImg2} alt="" />
+        <div className="flex gap-4 justify-center items-center my-5 flex-col lg:flex-row">
+            <div className="img-box w-full lg:w-6/12 rounded-3xl overflow-hidden">
+            <img className="max-w-full object-contain " src={bannerImg1} alt="" />
+            </div>
+            <div className="img-box w-full lg:w-6/12 rounded-3xl overflow-hidden">
+            <img className="max-w-full object-contain  " src={bannerImg2} alt="" />
+            </div>
         </div>
         </div>
       </div>

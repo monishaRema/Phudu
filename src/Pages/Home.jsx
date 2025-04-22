@@ -3,12 +3,14 @@ import Banner from '../Components/Banner';
 import { useLoaderData } from 'react-router';
 import Doctors from '../Components/Doctors';
 import Services from '../Components/Services';
-import DocotorCard from '../Components/DocotorCard';
+
 
 const Home = () => {
    
     const doctors = useLoaderData();
     const [doctorsData,setDoctorData] = useState(doctors);
+
+
     const handleSeachBtn = (e,text)=>{
         e.preventDefault();
         const searhedDoctors = doctors.filter(doctor=>doctor.name.toLowerCase().includes(text.toLowerCase()));

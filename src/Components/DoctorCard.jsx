@@ -1,11 +1,15 @@
 import React from "react";
 import { CgDanger } from "react-icons/cg";
 import { RiRegisteredLine } from "react-icons/ri";
-import { Link, useLoaderData, useParams } from "react-router";
+import { Link, useLoaderData, useLocation, useParams } from "react-router";
 import { setDataToDB } from "../Utility/Utility";
 
-const DocotorCard = () => {
+const DoctorCard = () => {
+  const location = useLocation();
+  const idFromPath = location.pathname.split("/")[2];
+
   const { id } = useParams();
+  const newId = id ? id : idFromPath
   const allDoctors = useLoaderData();
   const doctorDetails = allDoctors.find((doctor) => doctor.id == id);
   const { name, education, registration, availability, works, fee, image } =
@@ -26,15 +30,15 @@ const DocotorCard = () => {
           </p>
         </div>
 
-        <div className="doctor-card p-14 rounded-2xl bg-white flex items-center gap-5">
-          <div className="img-box rounded-xl overflow-hidden w-4/12 ">
+        <div className="doctor-card p-14 rounded-2xl bg-white flex flex-col lg:flex-row lg:items-center gap-5 text-center lg:text-left">
+          <div className="img-box rounded-xl overflow-hidden w-full lg:w-4/12 ">
             <img
               className="size-full object-cover"
               src={image}
               alt={name + " Doctor"}
             />
           </div>
-          <div className="content-box  w-8/12">
+          <div className="content-box w-full  lg:w-8/12">
             <h2 className="text-2xl text-dark font-black mt-4 mb-3">{name}</h2>
             <p className="text-lg font-medium uppercase mb-3">
               {education.field}
@@ -47,13 +51,13 @@ const DocotorCard = () => {
               <p className="text-xl font-bold text-dark mt-2">{works}</p>
             </div>
             <div className="border-t border-b border-dashed border-gray-300 mt-4 py-4">
-              <p className="text-lg font-medium flex gap-2 items-center">
+              <p className="text-lg font-medium flex gap-2 lg:items-center justify-center lg:justify-start">
                 {" "}
                 <RiRegisteredLine className="size-6"></RiRegisteredLine>
                 {registration}{" "}
               </p>
             </div>
-            <div className="meta flex gap-4 text-sm font-medium my-6 items-center">
+            <div className="meta flex gap-4 text-sm font-medium my-6 items-center flex-wrap justify-center lg:justify-start">
               <span className="text-xl font-bold text-dark">Availability</span>
               <div className="flex gap-4">
                 {availability.map((day, i) => (
@@ -66,7 +70,7 @@ const DocotorCard = () => {
                 ))}
               </div>
             </div>
-            <p className="fee flex gap-2 text-base">
+            <p className="fee flex gap-2 text-base justify-center lg:justify-start ">
               <span className="text-base font-black text-dark">
                 Consultation Fee:
               </span>
@@ -88,16 +92,22 @@ const DocotorCard = () => {
             </span>
           </div>
           <div className="text-center mt-6 border-t pt-4 border-gray-200">
-            <div className="bg-[#FFA00015] text-[#FFA000] p-2 rounded-full mb-10">
-              <p className="flex gap-5 items-center justify-center">
-                <CgDanger className="size-7"></CgDanger>
+          
+              <p className="flex gap-2 items-start justify-center bg-[#FFA00015] text-[#FFA000] p-2 rounded-full mb-10">
+                <span >
+                  <CgDanger size={28} ></CgDanger>
+                </span>
+                
+                <span>
                 Due to high patient volume, we are currently accepting
                 appointments for today only. We appreciate your understanding
                 and cooperation.
+                </span>
+               
               </p>
-            </div>
+            
             <button
-              onClick={() => setDataToDB(id)}
+              onClick={() => setDataToDB(newId)}
               className="block py-4 px-8 w-full font-bold text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
             >
               Book Appointment Now
@@ -109,4 +119,4 @@ const DocotorCard = () => {
   );
 };
 
-export default DocotorCard;
+export default DoctorCard;
