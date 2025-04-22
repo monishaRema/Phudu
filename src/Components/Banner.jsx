@@ -11,8 +11,8 @@ const Banner = ({handleSeachBtn}) => {
   return (
     <section className="banner py-5">
       <div className="my-container ">
-        <div className="bg-linear-to-t from-[#ffffff] to-[#ffffff05]   px-25 py-10 rounded-3xl border-3 border-white">
-        <h1 className="text-dark font-black text-5xl text-center mt-10 max-w-[920px] mx-auto">
+        <div className="bg-linear-to-t from-[#ffffff] to-[#ffffff05] px-10 md:px-25 py-10 rounded-3xl border-3 border-white">
+        <h1 className="text-dark font-black text-3xl md:text-4xl lg:text-5xl text-center mt-10 max-w-[920px] mx-auto">
           Dependable Care, Backed by Trusted Professionals.
         </h1>
         <p className=" text-center mt-4  max-w-[920px] mx-auto">

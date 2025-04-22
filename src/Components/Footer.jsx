@@ -17,7 +17,7 @@ const Footer = () => {
                     <h3  className="text-3xl font-black text-dark" >Phudu</h3>
                 </Link>
                 <nav>
-                    <ul className="flex gap-8 items-center">
+                    <ul className="flex gap-8 items-center flex-wrap justify-center">
                       <li><NavLink to={'/'} className='navbtn text-lg font-medium inline-block px-4 py-2 text-gray-500 hover:text-blue-500 transition ease-in-out duration-300'>Home</NavLink></li>
                       <li><NavLink to={'my-bookings'} className='navbtn text-lg font-medium inline-block px-4 py-2 text-gray-500 hover:text-blue-500 transition ease-in-out duration-300'>My-Bookings</NavLink></li>
                       <li><NavLink to={'blogs'} className='navbtn text-lg font-medium inline-block px-4 py-2 text-gray-500 hover:text-blue-500 transition ease-in-out duration-300'>Blogs</NavLink></li>

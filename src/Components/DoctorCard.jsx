@@ -31,10 +31,10 @@ const DoctorCard = () => {
           </p>
         </div>
 
-        <div className="doctor-card p-14 rounded-2xl bg-white flex flex-col lg:flex-row lg:items-center gap-5 text-center lg:text-left">
-          <div className="img-box rounded-xl overflow-hidden w-full lg:w-4/12 ">
+        <div className="doctor-card p-14 rounded-2xl bg-white flex flex-col lg:flex-row lg:items-center gap-8 text-center lg:text-left">
+          <div className="img-box rounded-xl overflow-hidden w-full lg:w-4/12 max-h-[450px]">
             <img
-              className="size-full object-cover"
+              className="size-full object-cover max-h-[450px]"
               src={image}
               alt={name + " Doctor"}
             />
@@ -71,7 +71,7 @@ const DoctorCard = () => {
                 ))}
               </div>
             </div>
-            <p className="fee flex gap-2 text-base justify-center lg:justify-start ">
+            <p className="fee flex gap-2 text-base justify-center lg:justify-start flex-wrap">
               <span className="text-base font-black text-dark">
                 Consultation Fee:
               </span>
@@ -94,12 +94,12 @@ const DoctorCard = () => {
           </div>
           <div className="text-center mt-6 border-t pt-4 border-gray-200">
           
-              <p className="flex gap-2 items-start justify-center bg-[#FFA00015] text-[#FFA000] p-2 rounded-full mb-10">
-                <span >
-                  <CgDanger size={28} ></CgDanger>
+              <p className=" bg-[#FFA00015] text-[#FFA000] p-3 px-4 rounded-full mb-10">
+                <span className="inline">
+                  <CgDanger size={28} className="inline"></CgDanger>
                 </span>
-                
-                <span>
+                <span> </span>
+                <span className="inline">
                 Due to high patient volume, we are currently accepting
                 appointments for today only. We appreciate your understanding
                 and cooperation.
@@ -109,7 +109,7 @@ const DoctorCard = () => {
             
             <button
               onClick={() => setDataToDB(newId, name, navigate)}
-              className="block py-4 px-8 w-full font-bold text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
+              className="block py-4 px-8 w-full font-bold text-lg md:text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
             >
               Book Appointment Now
             </button>

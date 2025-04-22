@@ -21,7 +21,7 @@ const[viewAll, setviewAll] = useState(false);
     return (
         <section className="doctors py-20">
             <div className="my-container">
-                <h2 className='text-dark font-black text-4xl text-center'>Our Best Doctors</h2>
+                <h2 className='text-dark font-black text-3xl md:text-4xl text-center'>Our Best Doctors</h2>
                 <p className=' text-center mt-4 mb-8 max-w-[1000px] mx-auto'>
                 Our platform connects you with verified, experienced doctors across various specialties — all at your convenience. Whether it's a routine checkup or urgent consultation, book appointments in minutes and receive quality care you can trust.
                 </p>
