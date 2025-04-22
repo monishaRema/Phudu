@@ -1,10 +1,11 @@
 import React from "react";
 import { CgDanger } from "react-icons/cg";
 import { RiRegisteredLine } from "react-icons/ri";
-import { Link, useLoaderData, useLocation, useParams } from "react-router";
+import { Link, useLoaderData, useLocation, useNavigate, useParams } from "react-router";
 import { setDataToDB } from "../Utility/Utility";
 
 const DoctorCard = () => {
+  const navigate = useNavigate()
   const location = useLocation();
   const idFromPath = location.pathname.split("/")[2];
 
@@ -107,7 +108,7 @@ const DoctorCard = () => {
               </p>
             
             <button
-              onClick={() => setDataToDB(newId)}
+              onClick={() => setDataToDB(newId, name, navigate)}
               className="block py-4 px-8 w-full font-bold text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
             >
               Book Appointment Now

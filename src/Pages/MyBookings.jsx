@@ -5,6 +5,7 @@ import Booking from "../Components/Booking";
 import { Slide, toast } from "react-toastify";
 import NoBooking from "../Components/NoBooking";
 import MyBarChart from "../Components/BarChart";
+import { GiConsoleController } from "react-icons/gi";
 
 const MyBookings = () => {
   const allDoctors = useLoaderData();
@@ -28,6 +29,7 @@ const MyBookings = () => {
     const convertedListData = bookingData.map((id) => parseInt(id));
     const newBookingData = convertedListData.filter((doctor) => doctor !== id);
     const data = JSON.stringify(newBookingData);
+   
     localStorage.setItem("booking", data);
     toast.warning("Your appointment cancelled successfully!", {
       position: "top-right",
@@ -51,16 +53,8 @@ const MyBookings = () => {
           </div>
         )}
 
-        <div className="my-bookings-info">
-          <h1 className="text-dark font-black text-4xl text-center">
-            My Today Appointments
-          </h1>
-          <p className=" text-center mt-4 max-w-[1000px] mx-auto">
-            Our platform connects you with verified, experienced doctors across
-            various specialties — all at your convenience.
-          </p>
-        </div>
-        <div className="booking-container flex flex-col gap-8 mt-8">
+ 
+        
           {booking.length > 0 ? (
             booking.map((doctor) => (
               <Booking
@@ -72,7 +66,7 @@ const MyBookings = () => {
           ) : (
             <NoBooking></NoBooking>
           )}
-        </div>
+       
       </div>
     </section>
   );

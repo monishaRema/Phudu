@@ -28,11 +28,11 @@ const Footer = () => {
             </div>
             <div className="border-t border-[#0F0F0F20] max-w-[1060px] mx-auto my-8"></div>
                 <div className="buttons flex gap-6 items-center justify-center">
-                    <Link >
+                    <Link to={'https://www.facebook.com/'} target='_blank' >
                         <FaFacebook className='size-9 text-blue-500'></FaFacebook>
                     </Link>
 
-                    <Link className='size-9 bg-gray-800 rounded-full text-white flex-center'>
+                    <Link  to={'https://x.com/'} target='_blank' className='size-9 bg-gray-800 rounded-full text-white flex-center'>
 
                      <BsTwitterX className='text-xl'></BsTwitterX>
 
@@ -40,11 +40,11 @@ const Footer = () => {
 
                     
 
-                    <Link className='size-9 bg-[#0575B3] rounded-full text-white flex-center'>
+                    <Link to={'https://linkedin.com/'} target='_blank'  className='size-9 bg-[#0575B3] rounded-full text-white flex-center'>
                     <TiSocialLinkedin className='text-3xl'></TiSocialLinkedin>
 
                     </Link>
-                    <Link>
+                    <Link to={'https://youtube.com'} target='_blank' >
                     <FaCirclePlay className='size-9 text-[#ff0000]'></FaCirclePlay>
                     </Link>
                     

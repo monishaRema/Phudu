@@ -7,12 +7,14 @@ import Error from "../Pages/Error";
 
 import DoctorCard from "../Components/DoctorCard";
 import Spinner from "../Components/Spinner";
+import ErrorDoctor from "../Components/ErrorDoctor";
 
 export const Routes = createBrowserRouter([
   {
     path: "/",
     element: <RootLayout />,
     errorElement: <Error />,
+    hydrateFallbackElement: <Spinner></Spinner>,
     children: [
       {
         path: "/",
@@ -32,9 +34,16 @@ export const Routes = createBrowserRouter([
         },
         Component: MyBookings,
       },
-      { path: "/blogs", Component: Blog },
+      { path: "/blogs",
+        hydrateFallbackElement: <Spinner></Spinner>,
+        loader: async () => {
+          const res = await fetch("/questionary.json");
+          return res.json();
+        },
+        Component: Blog },
       {
         path: "/doctor/:id",
+        errorElement: <ErrorDoctor></ErrorDoctor>,
         loader: async () => {
           const res = await fetch("/doctors.json");
           return res.json();
