@@ -15,7 +15,7 @@ const Home = () => {
         setDoctorData(searhedDoctors);
        
     }
-    console.log(doctorsData);
+    // console.log(doctorsData);
     return (
         <>
             <Banner handleSeachBtn={handleSeachBtn}></Banner>

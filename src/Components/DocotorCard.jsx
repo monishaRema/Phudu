@@ -2,22 +2,14 @@ import React from "react";
 import { CgDanger } from "react-icons/cg";
 import { RiRegisteredLine } from "react-icons/ri";
 import { Link, useLoaderData, useParams } from "react-router";
+import { setDataToDB } from "../Utility/Utility";
 
 const DocotorCard = () => {
   const { id } = useParams();
   const allDoctors = useLoaderData();
   const doctorDetails = allDoctors.find((doctor) => doctor.id == id);
-  const {
-    name,
-    education,
-    registration,
-    availability,
-    works,
-    fee,
-    image,
-  } = doctorDetails;
-
-
+  const { name, education, registration, availability, works, fee, image } =
+    doctorDetails;
 
   return (
     <section className="doctor-details py-20">
@@ -43,48 +35,52 @@ const DocotorCard = () => {
             />
           </div>
           <div className="content-box  w-8/12">
-          <h2 className="text-2xl text-dark font-black mt-4 mb-3">{name}</h2>
-          <p className="text-lg font-medium uppercase mb-3">
-              {education.field}<br></br>
+            <h2 className="text-2xl text-dark font-black mt-4 mb-3">{name}</h2>
+            <p className="text-lg font-medium uppercase mb-3">
+              {education.field}
+              <br></br>
               {education.institution}
             </p>
-            <p>
-                <span className=" text-xl font-medium">Working At</span><br></br>
-                <p className="text-xl font-bold text-dark mt-2">
-                    {works}
-                </p>
-            </p>
+            <div>
+              <span className=" text-xl font-medium">Working At</span>
+              <br></br>
+              <p className="text-xl font-bold text-dark mt-2">{works}</p>
+            </div>
             <div className="border-t border-b border-dashed border-gray-300 mt-4 py-4">
-            <p className="text-lg font-medium flex gap-2 items-center">
-              {" "}
-              <RiRegisteredLine className="size-6"></RiRegisteredLine>
-              {registration}{" "}
-            </p>
+              <p className="text-lg font-medium flex gap-2 items-center">
+                {" "}
+                <RiRegisteredLine className="size-6"></RiRegisteredLine>
+                {registration}{" "}
+              </p>
             </div>
             <div className="meta flex gap-4 text-sm font-medium my-6 items-center">
-                <span className="text-xl font-bold text-dark">Availability</span>
-                <div className="flex gap-4">
-                    {
-                        availability.map(day => ( <span className="bg-[#FFA00010] border border-[#FFA000] text-[#FFA000] px-4 py-2 rounded-full">{day}</span>))
-                    }
-                   
-                </div>
+              <span className="text-xl font-bold text-dark">Availability</span>
+              <div className="flex gap-4">
+                {availability.map((day, i) => (
+                  <span
+                    key={i}
+                    className="bg-[#FFA00010] border border-[#FFA000] text-[#FFA000] px-4 py-2 rounded-full"
+                  >
+                    {day}
+                  </span>
+                ))}
+              </div>
             </div>
             <p className="fee flex gap-2 text-base">
-                <span className="text-base font-black text-dark">Consultation Fee:</span>
-                <span className="text-blue-500 font-bold">{fee}</span>
-                <span className="text-gray-400">(incl. Vat)</span>
-                <span className="text-blue-500">Per consultation</span>
+              <span className="text-base font-black text-dark">
+                Consultation Fee:
+              </span>
+              <span className="text-blue-500 font-bold">{fee}</span>
+              <span className="text-gray-400">(incl. Vat)</span>
+              <span className="text-blue-500">Per consultation</span>
             </p>
-            
-            
-      
-         
           </div>
         </div>
 
         <div className="bg-white w-full rounded-2xl  text-black p-8 mt-6">
-            <h2 className="text-center text-2xl text-dark font-black mt-4 mb-3">Book an Appointment</h2>
+          <h2 className="text-center text-2xl text-dark font-black mt-4 mb-3">
+            Book an Appointment
+          </h2>
           <div className="text-center mt-6 border-t border-dashed pt-4 border-gray-300 flex gap-8 items-center justify-between">
             <span className="text-lg font-bold">Availability</span>
             <span className="px-4 py-2 rounded-full bg-[#09982F10] border border-[#09982F20] text-green">
@@ -100,7 +96,10 @@ const DocotorCard = () => {
                 and cooperation.
               </p>
             </div>
-            <button className="block py-4 px-8 w-full font-bold text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300">
+            <button
+              onClick={() => setDataToDB(id)}
+              className="block py-4 px-8 w-full font-bold text-xl rounded-full bg-blue-500 text-white outline-0 border-0 hover:bg-blue-600 transition ease-in-out duration-300"
+            >
               Book Appointment Now
             </button>
           </div>

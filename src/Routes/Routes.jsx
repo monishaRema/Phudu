@@ -16,13 +16,15 @@ export const Routes = createBrowserRouter([
       { path: "/", 
         index: true,
         hydrateFallbackElement:<p>Loading, Please wait.. </p>,
-        loader: () => fetch("doctors.json"),
+        loader: () => fetch("./doctors.json"),
          Component: Home },
-      { path: "/my-bookings", Component: MyBookings },
+      { path: "/my-bookings",
+        loader: () => fetch("./doctors.json"),
+         Component: MyBookings },
       { path: "/blogs", Component: Blog },
       {
-        path: "doctor/:id",
-        loader: () => fetch("doctors.json"),
+        path: "/doctor/:id",
+        loader: () => fetch("./doctors.json"),
         Component: DocotorCard
       }
     ],
