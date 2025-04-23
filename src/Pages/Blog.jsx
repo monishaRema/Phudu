@@ -4,7 +4,7 @@ import { Link, useLoaderData } from "react-router";
 const Blog = () => {
   const blogs = useLoaderData();
    useEffect(()=> {
-      document.title = 'Phudu | Blog'
+      document.title = 'Phudu | Blogs'
    },[])
   return (
     <section className="blogs py-20 ">

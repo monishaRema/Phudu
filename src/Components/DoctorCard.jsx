@@ -13,7 +13,7 @@ const DoctorCard = () => {
   const newId = id ? id : idFromPath
   const allDoctors = useLoaderData();
   const doctorDetails = allDoctors.find((doctor) => doctor.id == id);
-  const { name, education, registration, availability, works, fee, image } =
+  const { name, education, registration, availability, works, fee, image, speciality } =
     doctorDetails;
 
   const dayName = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
@@ -27,7 +27,7 @@ const DoctorCard = () => {
 
   useEffect(()=> {
       document.title = `Phudu | ${name}`
-  }, [id])
+  }, [newId])
 
   return (
     <section className="doctor-details py-20">
@@ -44,25 +44,27 @@ const DoctorCard = () => {
           </p>
         </div>
 
-        <div className="doctor-card p-14 rounded-2xl bg-white flex flex-col lg:flex-row lg:items-center gap-8 text-center lg:text-left">
-          <div className="img-box rounded-xl overflow-hidden w-full lg:w-4/12 max-h-[450px]">
+        <div className="doctor-card p-14 rounded-2xl bg-white flex flex-col lg:flex-row gap-8 text-center lg:text-left">
+          <div className="img-box rounded-xl overflow-hidden w-full lg:w-5/12 max-h-[450px]">
             <img
-              className="size-full object-cover max-h-[450px]"
+              className="size-full object-cover max-h-[450px] lg:max-h-[700px]"
               src={image}
               alt={name + " Doctor"}
             />
           </div>
-          <div className="content-box w-full  lg:w-8/12">
+          <div className="content-box w-full  lg:w-7/12">
             <h2 className="text-2xl text-dark font-black mt-4 mb-3">{name}</h2>
             <p className="text-lg font-medium uppercase mb-3">
               {education.field}
               <br></br>
               {education.institution}
             </p>
+            <p className='text-xl font-medium mb-3 '><span>Speciality : </span> <span className="text-xl font-bold text-dark">{speciality}</span></p>
             <div>
               <span className=" text-xl font-medium">Working At</span>
               <br></br>
               <p className="text-xl font-bold text-dark mt-2">{works}</p>
+             
             </div>
             <div className="border-t border-b border-dashed border-gray-300 mt-4 py-4">
               <p className="text-lg font-medium flex gap-2 lg:items-center justify-center lg:justify-start">
