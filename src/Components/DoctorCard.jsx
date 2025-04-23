@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { CgDanger } from "react-icons/cg";
 import { RiRegisteredLine } from "react-icons/ri";
 import { Link, useLoaderData, useLocation, useNavigate, useParams } from "react-router";
@@ -23,6 +23,11 @@ const DoctorCard = () => {
   const available = availability.includes(TodayName) ? true : false
 
   const btnDisabled = available ? '' : 'opacity-50 cursor-not-allowed bg-gray-400 hover:bg-gray-400'
+
+
+  useEffect(()=> {
+      document.title = `Phudu | ${name}`
+  }, [id])
 
   return (
     <section className="doctor-details py-20">

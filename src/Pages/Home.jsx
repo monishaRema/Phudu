@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import Banner from '../Components/Banner';
 import { useLoaderData } from 'react-router';
 import Doctors from '../Components/Doctors';
@@ -6,6 +6,10 @@ import Services from '../Components/Services';
 
 
 const Home = () => {
+ 
+    useEffect(() => {
+        document.title = 'Phudu | Home'
+    }, [])
    
     const doctors = useLoaderData();
     const [doctorsData,setDoctorData] = useState(doctors);

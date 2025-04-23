@@ -1,10 +1,13 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import Navbar from '../Components/Navbar';
 import Footer from '../Components/Footer';
 import ErrorImg from '../assets/vecteezy_purple-christmas-bulb_18938521.jpg';
 import { Link } from 'react-router';
 
 const Error = () => {
+       useEffect(()=> {
+          document.title = 'Page not Found | Phudu'
+       },[])
     return (
         <>
             <Navbar></Navbar>

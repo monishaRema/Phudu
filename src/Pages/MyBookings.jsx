@@ -1,13 +1,17 @@
 import React, { useEffect, useState } from "react";
-import { useLoaderData } from "react-router";
+import { useLoaderData} from "react-router";
 import { getDataFromDB } from "../Utility/Utility";
 import Booking from "../Components/Booking";
 import { Slide, toast } from "react-toastify";
 import NoBooking from "../Components/NoBooking";
 import MyBarChart from "../Components/BarChart";
-import { GiConsoleController } from "react-icons/gi";
+
 
 const MyBookings = () => {
+ useEffect(()=> {
+    document.title = 'Phudu | My Bookings'
+ },[])
+
   const allDoctors = useLoaderData();
   const [booking, setBooking] = useState([]);
 
