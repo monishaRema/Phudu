@@ -1,12 +1,59 @@
-# React + Vite
+# Phudu - Medical Appointment Booking App 🏥
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React web application for scheduling and managing doctor appointments.  
+Phudu is designed to streamline the appointment booking process for patients, making it intuitive and efficient to find, book, and manage doctor visits—**all with zero backend required**.
 
-Currently, two official plugins are available:
+[**Live Demo**](https://fanatical-bun.surge.sh/) | [**GitHub Repo**](https://github.com/monishaRema/Phudu)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## Expanding the ESLint configuration
+## ✨ Features
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- **Book & Manage Appointments:**  
+  Easily schedule, edit, or cancel medical appointments with interactive forms.
+- **Calendar Dashboard:**  
+  View upcoming and past appointments in a clear, calendar-based interface.
+- **Doctor Directory:**  
+  Browse doctors by specialty, see details, and choose the right provider.
+- **Patient Profile:**  
+  Manage your details and view appointment history.
+- **Visual Charts:**  
+  See your booking stats and trends with built-in charts.
+- **Fully Responsive:**  
+  Looks great on mobile, tablet, and desktop.
+- **Light/Dark Mode:**  
+  Accessible UI with theme toggle for comfort.
+- **Instant UI Feedback:**  
+  Toasts, alerts, and smooth transitions powered by DaisyUI & React Icons.
+- **Persistent Data:**  
+  All data saved locally in your browser (localStorage)—no signup needed.
+- **One-Click Demo Reset:**  
+  Instantly clear demo data for portfolio reviewers.
+
+---
+
+## 🚀 Tech Stack
+
+- **Frontend:**  
+  [React](https://react.dev/)  
+  [React Router](https://reactrouter.com/)  
+  [Tailwind CSS](https://tailwindcss.com/)  
+  [DaisyUI](https://daisyui.com/)  
+  [React Icons](https://react-icons.github.io/react-icons/)  
+  [Chart.js](https://www.chartjs.org/) or [Recharts](https://recharts.org/)  
+  **Local Storage** for data persistence
+
+- **Deployment:**  
+  [Surge.sh](https://surge.sh/)
+
+---
+
+
+## 🏁 Getting Started
+
+**Clone & Run Locally:**
+```bash
+git clone https://github.com/monishaRema/Phudu.git
+cd Phudu
+npm install
+npm start
