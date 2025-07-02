@@ -1,4 +1,4 @@
-<img src="https://i.ibb.co/84DTK6pC/markuphero-ZHqjf-Eq-PFBR5-UTQd-T2-XW.png" width="780">
+<img src="https://i.ibb.co/84DTK6pC/markuphero-ZHqjf-Eq-PFBR5-UTQd-T2-XW.png" width="780" />
 
 # Phudu - Medical Appointment Booking App 🏥
 
