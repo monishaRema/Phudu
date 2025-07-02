@@ -1,3 +1,5 @@
+<img src="https://i.ibb.co/84DTK6pC/markuphero-ZHqjf-Eq-PFBR5-UTQd-T2-XW.png" width="780">
+
 # Phudu - Medical Appointment Booking App 🏥
 
 A modern React web application for scheduling and managing doctor appointments.  
