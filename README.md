@@ -1,4 +1,4 @@
-![Phudu Preview]("/src/assets/ss.png")
+![Phudu Preview]("./src/assets/ss.png")
 
 # Phudu - Medical Appointment Booking App 🏥
 
