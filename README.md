@@ -1,4 +1,4 @@
-![Phudu Preview](https://i.ibb.co/84DTK6pC/markuphero-ZHqjf-Eq-PFBR5-UTQd-T2-XW.png)
+![Phudu Preview]("/src/assets/ss.png")
 
 # Phudu - Medical Appointment Booking App 🏥
 
