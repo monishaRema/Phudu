@@ -1,4 +1,4 @@
-![Phudu Preview]("./src/assets/ss.png")
+<img src="https://github.com/monishaRema/Phudu/blob/main/src/assets/ss.png" />
 
 # Phudu - Medical Appointment Booking App 🏥
 
